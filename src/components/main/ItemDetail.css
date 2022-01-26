@@ -1,0 +1,51 @@
+.detalleProductos{
+    padding-top: 80px;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.cartsDetalle{
+    display: flex;
+}
+
+.cartsDetalle img{
+    width: 50%;
+}
+
+.nomdespreCartGlobal{
+    width: 50%;
+    margin: auto;
+}
+
+.nomdespreCart{
+    text-align: center;
+}
+
+.nomdespreCart h2{
+    font-size: 24px;
+}
+
+.description{
+    font-size: 18px;
+}
+
+.precio-product{
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+
+.detalleProductos h3{
+    text-align: center;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.verDetalle{
+    background-color: #25b244;
+    font-size: 16px;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+}
