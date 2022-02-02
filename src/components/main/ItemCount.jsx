@@ -2,7 +2,7 @@ import react, {useState} from "react";
 import './ItemCount.css'
 
 
-function ItemCount({maximo}){
+function ItemCount({maximo, onAdd}){
 
     const [cantidad, setCantidad] = useState(1);
 
@@ -17,13 +17,7 @@ function ItemCount({maximo}){
        
         if(cantidad > 0) setCantidad(cantidad - 1)
 
-    }
-
-
-    function agregar(){
-        
-        alert(cantidad)
-    }
+    }  
 
     
     
@@ -36,7 +30,7 @@ function ItemCount({maximo}){
             <button className="buttonMasMenosDer"  onClick={()=> sumar()}>+</button>
             <br />
             <br />
-            <button className="agregar" onClick={()=> agregar()}>Agregar</button>
+            <button className="agregar" onClick={()=> onAdd(cantidad)}>Agregar al carrito</button>
           
 
         </div>

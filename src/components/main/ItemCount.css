@@ -10,6 +10,8 @@
     color: white;
     border: none;
     border-radius: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
     
 }
 
@@ -21,5 +23,10 @@
     border: none;
     border-radius: 3px;
     
+}
+
+.contenedorButton span{
+    font-size: 12px;
+    margin: 2px;
 }
 

@@ -1,5 +1,5 @@
 .listaProductos{
-    width: 960px;
+    max-width: 960px;
     margin: auto;
     padding-top: 5px;
     display: flex;

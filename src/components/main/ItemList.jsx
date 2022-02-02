@@ -14,9 +14,9 @@ function ItemList({arrayDeProductos}){
        
         <div className="listaProductos">
             
-            {arrayDeProductos.map(Producto =>{
-                return <Item Producto ={Producto} /> 
-            } ) }           
+        {arrayDeProductos.map((product) => {
+        return <Item data={product} key={product.id} />;
+      })}          
         </div>
         
          

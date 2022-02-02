@@ -1,21 +1,37 @@
 import './NavBar.css';
 import CartWidjet from './CartWidget';
+import {NavLink} from 'react-router-dom'
 
 
 function NavBar() {
   return (
     <div className="header">
       <div className="header-section container">
-        <a className="logo" href="">
+        <NavLink to="/" className="logo">
           Nutherbs.com
-        </a>
-        <ul>
-            <li><a href=""></a>Nosotros</li>
-            <li><a href=""></a>Productos</li>
-            <li><a href=""></a>Contacto</li>
+        </NavLink>
+        <ul className='ulNavbar'>
+            <li>
+              <NavLink
+               to="/category/salud natural">
+                 Salud Natural
+                 </NavLink>
+            </li>
+            <li>
+              <NavLink to="/category/bajar de peso">Bajar de Peso</NavLink>
+            </li>
+            <li>
+              <NavLink to="/category/energizantes">Energizantes</NavLink>
+            </li>
+           
             
         </ul>
-        {CartWidjet()}    
+        <li>
+              <NavLink to="/carrito" >
+              <CartWidjet />
+              </NavLink>
+            </li>
+            
       </div>
     </div>
   );

@@ -1,11 +1,22 @@
-import react, {useStade, useEffect } from "react";
+import react, {useState } from "react";
 import ItemCount from "./ItemCount";
 import '../main/ItemDetail.css'
+import { Link } from "react-router-dom";
 
 
 const ItemDetail = ({ product }) => {
 
-   //console.log(product)
+  const [mostrarItemCount, setMostrarItemCount] = useState(true);
+  const[cantidad, setCantidad] = useState(null)
+
+  function onAdd(cantidad){
+    setCantidad(cantidad)
+    
+    //alert(cantidad)
+    setMostrarItemCount(false)
+}
+
+  // console.log(product)
     return (
       <div className="detalleProductos">
       <div className="cartsDetalle">
@@ -18,12 +29,26 @@ const ItemDetail = ({ product }) => {
           <p className="description">{product.descripcion}</p>
           <p className="precio-product">S/.<span>{product.precio}</span></p>
              </div>
-          <ItemCount maximo={product.Stock}  />
-          </div>          
-        </div>
-        <h3>Descripción</h3>
+          <h3>Descripción</h3>
         <h2>{product.descripcionGeneral}</h2>
+        <div className="btnIrCarrito">
+             {
+          (mostrarItemCount)?
+          <ItemCount maximo={product.Stock} onAdd={onAdd} />
+          :(
+            <Link to={'/cart'}>
+              <button>{`Tienes ${cantidad} productos en carrito, Ir a Carrito`} </button>
+            </Link>
+          )
+
+              }
+                   
+        </div>
+        </div>
+        
       </div>
+      
+       </div>
     );
   };
 

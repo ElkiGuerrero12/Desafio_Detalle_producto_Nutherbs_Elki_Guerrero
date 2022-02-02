@@ -24,13 +24,25 @@
 
 .header-section li{
     padding-right: 20px;
+    list-style: none;
+}
+
+.header-section li a{
+    color: white;
+    
 }
 
 .logo{
     color: white;
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
-.fa{
-    font-size: 2.2rem;
+.carrito{
+    font-size: 2.4rem !important; 
+}
+
+
+.ulNavbar a{
+    color: white;
+    font-size: 18px;
 }

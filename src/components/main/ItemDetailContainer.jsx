@@ -16,6 +16,7 @@ function ItemDetailContainer(){
       resolve([
         {
           id: 1,
+          category:"salud natural",
           nombre: "Liber",
           Stock: 5,
           descripcion: "Antiinflamatorio y diurético",
@@ -25,6 +26,7 @@ function ItemDetailContainer(){
         },
         {
           id: 2,
+          category:"bajar de peso",
           nombre: "Algas",
           Stock: 4,
           descripcion: "Adelgazante natural",
@@ -34,6 +36,7 @@ function ItemDetailContainer(){
         },
         {
           id: 3,
+          category:"salud natural",
           nombre: "Cardo Mariano",
           Stock: 4,
           descripcion: "Suplemento natural",
@@ -43,6 +46,7 @@ function ItemDetailContainer(){
         },
         {
           id: 4,
+          category:"energizantes",
           nombre: "Noni",
           Stock: 5,
           descripcion: "Suplemento natural",
@@ -52,6 +56,7 @@ function ItemDetailContainer(){
         },
         {
           id: 5,
+          category:"bajar de peso",
           nombre: "Caigua",
           Stock: 3,
           descripcion: "Adelgazante natural",
@@ -61,6 +66,7 @@ function ItemDetailContainer(){
         },
         {
           id: 6,
+          category:"energizantes",
           nombre: "Ginseng",
           Stock: 8,
           descripcion: "Multivitamíco",
@@ -70,6 +76,7 @@ function ItemDetailContainer(){
         },
         {
           id: 7,
+          category:"energizantes",
           nombre: "Ginko Biloba",
           Stock: 6,
           descripcion: "Suplemento natural",
@@ -79,12 +86,53 @@ function ItemDetailContainer(){
         },
         {
           id: 8,
+          category:"salud natural",
           nombre: "Graviola",
           Stock: 4,
           descripcion: "Antiinflamatorio natural",
           precio: 49.9,
           img: "../img/Graviola.jpg",
           descripcionGeneral:"Graviola en cápsulas, antioxidante y inmunoestimulante natural, tiene propiedades antiinflamatorias"
+        },
+        {
+          id: 9,
+          category:"salud natural",
+          nombre: "Chanca Piedra",
+          Stock: 4,
+          descripcion: "Antiinflamatorio natural",
+          precio: 49.9,
+          img: "../img/Chanca-piedra.jpg",
+          descripcionGeneral:"Chancapiedra, efectivo disolviendo cáculos renales y de la vesícula, elimina bacterias del tracto urinario"
+        },
+        {
+          id: 10,
+          category:"bajar de peso",
+          nombre: "Te Verde",
+          Stock: 3,
+          descripcion: "Adelgazante natural",
+          precio: 49.9,
+          img: "../img/te-verde.jpg",
+          descripcionGeneral:"Té verde seleccionado, Antioxidante natural. Protege el sistema inmunológico y estimula el metabolismo de grasas"
+        },
+        {
+          id: 11,
+          category:"bajar de peso",
+          nombre: "Lefen",
+          Stock: 3,
+          descripcion: "Adelgazante natural",
+          precio: 49.9,
+          img: "../img/Lefen.jpg",
+          descripcionGeneral:"Potente Quemador de grasa corporal. Controla el apetito y mejora tu metabolismo. Adelgazante Natural por excelencia"
+        },
+        {
+          id: 12,
+          category:"energizantes",
+          nombre: "Camu Camu",
+          Stock: 3,
+          descripcion: "Splemento Natural",
+          precio: 49.9,
+          img: "../img/Camu-camu.jpg",
+          descripcionGeneral:"Camu Camu, 60 veces más vitamina C que la naranja. Fortalece el sistema inmunológico, protege tu cuerpo contra infecciones virales"
         },
       ]);
     }, 2000);
