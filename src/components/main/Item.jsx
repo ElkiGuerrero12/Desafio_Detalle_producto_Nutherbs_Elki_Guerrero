@@ -6,7 +6,7 @@ import './Item.css'
 
 
 function Item({data}){
-    console.log(data)   
+   // console.log(data)   
 
     return(
         <div className="productos">

@@ -5,12 +5,15 @@ import ItemListContainer from './components/main/ItemListContainer';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import ItemDetailContainer from './components/main/ItemDetailContainer';
 import Cart from './components/header/Cart';
+import CartProvider from './context/CartProvider';
 
 
 
 function App() {
   return (
-  <BrowserRouter>
+   <CartProvider>
+
+<BrowserRouter>
   <p>
     <NavBar />
     <Switch>
@@ -30,6 +33,9 @@ function App() {
     
   </p> 
   </BrowserRouter>
+
+   </CartProvider> 
+  
   );
 }
 

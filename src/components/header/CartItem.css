@@ -1,0 +1,24 @@
+.productCart{
+    display: flex;
+    width: 70%;
+    margin: auto;
+    padding: 20px;
+}
+
+.productCart img{
+    width: 15%;
+}
+
+.productCartItems{
+    margin-left: 10%;
+}
+
+.mensajeCartVacio{
+    width: 100%;
+    text-align: center;
+
+}
+
+.mensajeCartVacio p, a {
+    font-size: 18px;
+}

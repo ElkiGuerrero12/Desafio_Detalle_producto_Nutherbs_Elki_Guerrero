@@ -143,7 +143,7 @@ function ItemDetailContainer(){
       .then((res) => {
         console.log(res)
        let listadoDeProductos = res.filter(item => item.id == itemId);
-        console.log(listadoDeProductos)
+       // console.log(listadoDeProductos)
 
           let myProducto = listadoDeProductos[0];
 

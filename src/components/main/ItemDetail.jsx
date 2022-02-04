@@ -1,7 +1,8 @@
-import react, {useState } from "react";
+import react, {useContext, useState } from "react";
 import ItemCount from "./ItemCount";
 import '../main/ItemDetail.css'
 import { Link } from "react-router-dom";
+import { cartContext } from "../../context/CartProvider";
 
 
 const ItemDetail = ({ product }) => {
@@ -9,7 +10,10 @@ const ItemDetail = ({ product }) => {
   const [mostrarItemCount, setMostrarItemCount] = useState(true);
   const[cantidad, setCantidad] = useState(null)
 
+  const { addToCart} = useContext(cartContext);
+
   function onAdd(cantidad){
+    addToCart(product, cantidad)
     setCantidad(cantidad)
     
     //alert(cantidad)
@@ -37,7 +41,7 @@ const ItemDetail = ({ product }) => {
           <ItemCount maximo={product.Stock} onAdd={onAdd} />
           :(
             <Link to={'/cart'}>
-              <button>{`Tienes ${cantidad} productos en carrito, Ir a Carrito`} </button>
+              <button>{`Tienes productos en carrito, Ir a Carrito`} </button>
             </Link>
           )
 

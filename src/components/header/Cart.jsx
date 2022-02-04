@@ -1,13 +1,33 @@
-import react from "react";
+import react, { useContext } from "react";
+import { cartContext } from "../../context/CartProvider";
 import '../header/Cart.css'
+import CartItem from "./CartItem";
+import { Link } from "react-router-dom";
 
 function Cart(){
 
-    return(
+    const {cart, clearCart} = useContext(cartContext)
 
-        <div className="pageCarrito">
-            carrito
+    console.log(cart)
+
+    return(
+        <>
+        {cart.length === 0 ?
+        <div className="mensajeCartVacio">
+            <p>No hay productos en carrito</p>
+            <Link to='/'>Ir a comprar</Link>
         </div>
+        :
+        <div className="pageCarrito">
+            {cart.map(element => <CartItem key={element.item.id} prod= {element}/> )}
+          <button onClick={() => clearCart()}>Vaciar Carrito</button>
+         </div>
+
+    }
+        
+        </>
+
+        
 
 
     )

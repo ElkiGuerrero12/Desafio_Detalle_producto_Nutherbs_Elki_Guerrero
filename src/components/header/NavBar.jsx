@@ -27,7 +27,7 @@ function NavBar() {
             
         </ul>
         <li>
-              <NavLink to="/carrito" >
+              <NavLink to="/cart" >
               <CartWidjet />
               </NavLink>
             </li>
