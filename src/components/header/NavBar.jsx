@@ -1,9 +1,17 @@
 import './NavBar.css';
 import CartWidjet from './CartWidget';
 import {NavLink} from 'react-router-dom'
+import { cartContext } from "../../context/CartProvider";
+import React, { useContext } from "react";
 
 
 function NavBar() {
+
+  const { totalUnidades} = useContext(cartContext)
+
+
+
+
   return (
     <div className="header">
       <div className="header-section container">
@@ -29,6 +37,7 @@ function NavBar() {
         <li>
               <NavLink to="/cart" >
               <CartWidjet />
+              <span>{totalUnidades()}</span>
               </NavLink>
             </li>
             

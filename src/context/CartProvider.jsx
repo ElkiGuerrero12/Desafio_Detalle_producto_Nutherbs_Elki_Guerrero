@@ -1,6 +1,7 @@
 import React, { createContext } from "react";
 import { useState } from "react/cjs/react.development";
 import { createRef } from "react/cjs/react.production.min";
+import CartWidjet from "../components/header/CartWidget";
 
 export const cartContext = createContext();
 
@@ -34,6 +35,23 @@ const CartProvider = ({children}) =>{
 
     }
 
+    //funtion precio total carrito
+    const precioTotal = () =>{
+        return cart.map((item) => item.item.precio * item.count).reduce((a,b) => a + b).toFixed(2)
+    }
+
+    //funtion suma de productos en carrito
+   const totalUnidades = () =>{
+    return cart.reduce((acum, producto) => {
+        return acum + producto.count;
+      }, 0);
+    };
+   
+
+    //console.log(cart.reduce((a,b) => a.count + b.count))
+
+
+
 //función que devueva si producto existe en carrito
 const isIncart = (id) =>{
     return cart.some(element => element.item.id === id)
@@ -45,10 +63,13 @@ const isIncart = (id) =>{
 
     return(
 
-        <cartContext.Provider value={{cart, addToCart, deleteItem, clearCart}}>
+        <cartContext.Provider value={{cart, addToCart, deleteItem, clearCart, precioTotal, totalUnidades}}>
             {children}
 
+         
+
         </cartContext.Provider>
+        
     )
 }
 

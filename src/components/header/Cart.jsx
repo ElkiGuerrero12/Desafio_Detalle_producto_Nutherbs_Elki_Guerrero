@@ -1,14 +1,22 @@
-import react, { useContext } from "react";
+import react, { useContext, useEffect, useState } from "react";
 import { cartContext } from "../../context/CartProvider";
 import '../header/Cart.css'
 import CartItem from "./CartItem";
 import { Link } from "react-router-dom";
+import CartWidjet from "./CartWidget";
+
 
 function Cart(){
 
-    const {cart, clearCart} = useContext(cartContext)
+    const {cart, clearCart, precioTotal} = useContext(cartContext)
 
-    console.log(cart)
+   // console.log(totalUnidades)
+     
+    //const[ unidades, setUnidades] = useState(0)
+
+  // useEffect (  () =>{
+   //     setUnidades(totalUnidades)
+   // },[])
 
     return(
         <>
@@ -20,7 +28,12 @@ function Cart(){
         :
         <div className="pageCarrito">
             {cart.map(element => <CartItem key={element.item.id} prod= {element}/> )}
+            <p>Total A pagar: S/.{precioTotal()} </p>
+           
+           
+            <div><button >Terminar la compra</button> </div>
           <button onClick={() => clearCart()}>Vaciar Carrito</button>
+         
          </div>
 
     }

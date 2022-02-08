@@ -13,7 +13,9 @@ const CartItem = ({prod})=>{
             <img src={prod.item.img} />
             <div className="productCartItems">
             <h3>{prod.item.nombre}</h3>
-            <p>Cantidad: {prod.count}</p>
+            <p>Cantidad:{prod.count}</p>
+            <h5>Precio:S/.{prod.item.precio}</h5>
+            <h5>Precio total:S/.{prod.item.precio * prod.count}</h5>
             <button onClick={() => deleteItem(prod.item.id)}>Eliminar</button>
             </div>
             </div>

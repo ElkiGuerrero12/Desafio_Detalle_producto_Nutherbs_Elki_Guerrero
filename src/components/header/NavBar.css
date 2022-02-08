@@ -29,7 +29,19 @@
 
 .header-section li a{
     color: white;
+    display: flex;
     
+}
+
+.header-section li a span{
+    border-radius: 100%;
+    border: 2px solid;
+    margin-left: 16px;  
+    top: 12px;
+    font-size: 13px;
+    width: 19px;
+    height: 20px;    
+    position: absolute;
 }
 
 .logo{
