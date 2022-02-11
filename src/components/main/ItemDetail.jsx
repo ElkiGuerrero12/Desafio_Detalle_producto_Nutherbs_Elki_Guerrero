@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { cartContext } from "../../context/CartProvider";
 
 
-const ItemDetail = ({ product }) => {
+const ItemDetail = ({ product }) => {  
 
   const [mostrarItemCount, setMostrarItemCount] = useState(true);
   const[cantidad, setCantidad] = useState(null)

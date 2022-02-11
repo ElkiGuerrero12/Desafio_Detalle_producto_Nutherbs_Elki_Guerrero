@@ -1,12 +1,11 @@
 import react from "react";
-import ItemCount from "./ItemCount"
 import { Link } from "react-router-dom";
 
 import './Item.css'
 
 
 function Item({data}){
-   // console.log(data)   
+    //console.log(data)   
 
     return(
         <div className="productos">
