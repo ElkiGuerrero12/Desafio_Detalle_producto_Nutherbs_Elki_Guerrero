@@ -1,0 +1,40 @@
+.formularioCompra{
+    width: 100%;
+    max-width: 537px;
+    margin: auto;
+}
+
+.datosPersonales h2{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.formularioCompra input{   
+    width: 70%;
+    margin: auto;
+    display: block;
+    margin-bottom: 10px;
+    height: 30px;
+    border: 1px solid #ced4da;
+    border-radius: 7px;
+
+}
+
+.botonComprar{
+    background-color: #25b244;
+    width: 40%;
+    margin: auto;
+    display: block;
+    border-radius: 8px;
+    padding: 5px;
+    color: white;
+    border: none;
+    font-size: 16px;
+}
+
+.compraExitosa h2{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+}

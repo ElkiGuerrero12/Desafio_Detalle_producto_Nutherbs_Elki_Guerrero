@@ -31,7 +31,7 @@ function Cart(){
             <p>Total A pagar: S/.{precioTotal()} </p>
            
            
-            <div><button >Terminar la compra</button> </div>
+            <div><Link to='/terminarcompra'><button>Terminar la compra</button></Link></div>
           <button onClick={() => clearCart()}>Vaciar Carrito</button>
          
          </div>
